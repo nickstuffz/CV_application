@@ -11,7 +11,7 @@ window.fetch = vi.fn(() => {
   return Promise.resolve({ json: () => Promise.resolve(user) });
 });
 
-describe("Testing App Component", () => {
+describe("App Component", () => {
   it("shows loading text while API request is in progress", async () => {
     render(<App />);
     const loading = screen.getByText("Loading...");
